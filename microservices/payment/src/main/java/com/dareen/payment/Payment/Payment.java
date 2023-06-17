@@ -1,4 +1,4 @@
-package com.project.demo.Payment;
+package com.dareen.payment.Payment;
 
 
 
@@ -15,7 +15,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.project.demo.Order.Order;
+
 
 @Entity
 @Table(name = "payment")

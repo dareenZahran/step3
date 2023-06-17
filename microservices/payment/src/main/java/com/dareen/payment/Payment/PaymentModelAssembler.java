@@ -1,4 +1,4 @@
-package com.project.demo.Payment;
+package com.dareen.payment.Payment;
 
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;

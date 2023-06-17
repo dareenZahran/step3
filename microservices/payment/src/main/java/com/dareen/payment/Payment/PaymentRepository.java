@@ -1,4 +1,4 @@
-package com.project.demo.Payment;
+package com.dareen.payment.Payment;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
