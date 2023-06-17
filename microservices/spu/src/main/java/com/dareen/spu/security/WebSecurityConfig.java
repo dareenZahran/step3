@@ -1,4 +1,4 @@
-package com.project.demo.security;
+package com.dareen.spu.security;
 
 
 
@@ -25,10 +25,10 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import com.project.demo.security.jwt.AuthEntryPointJwt;
-import com.project.demo.security.jwt.AuthTokenFilter;
-import com.project.demo.security.services.UserDetailsServiceImpl;
-
+import com.dareen.spu.security.jwt.AuthEntryPointJwt;
+import com.dareen.spu.security.jwt.AuthTokenFilter;
+import com.dareen.spu.security.services.UserDetailsServiceImpl;
+import org.springframework.security.config.annotaion.method.configuration.EnableGlobalmethodSecurity
 
 
 @Configuration

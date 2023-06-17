@@ -1,4 +1,4 @@
-package com.project.demo.security.jwt;
+package com.dareen.spu.security.jwt;
 
 
 
@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.project.demo.security.services.UserDetailsServiceImpl;
+import com.dareen.spu.security.services.UserDetailsServiceImpl;
 
 
 public class AuthTokenFilter extends OncePerRequestFilter {

@@ -1,4 +1,4 @@
- package com.project.demo.User;
+ package com.dareen.spu.User;
 // import java.util.List;
 // import java.util.Objects;
 
@@ -16,10 +16,10 @@ import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 // import javax.persistence.OneToMany;
-import com.project.demo.Category.Size;
+import com.dareen.spu.Category.Size;
 // @Entity
 // public class User {
-import com.project.demo.Order.Order;
+// import com.dareen.spu.Order.Order;
 
 //     private @Id @GeneratedValue Long id;
 //     @NotBlank(message = "first name name is required")

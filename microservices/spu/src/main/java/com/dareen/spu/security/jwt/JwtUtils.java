@@ -1,4 +1,4 @@
-package com.project.demo.security.jwt;
+package com.dareen.spu.security.jwt;
 
 
 import java.security.Key; 
@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication; 
 import org.springframework.stereotype.Component;
 
-import com.project.demo.security.services.UserDetailsImpl;
+import com.dareen.spu.security.services.UserDetailsImpl;
 
 import io.jsonwebtoken.ExpiredJwtException; 
 import io.jsonwebtoken.Jwts; 

@@ -1,4 +1,4 @@
-package com.project.demo.Product;
+package com.dareen.spu.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.project.demo.security.jwt.JwtUtils;
+import com.dareen.spu.security.jwt.JwtUtils;
 
 
 @CrossOrigin

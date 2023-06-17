@@ -1,4 +1,4 @@
-package com.project.demo.security.services;
+package com.dareen.spu.security.services;
 
 
 
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.project.demo.User.User;
-import com.project.demo.User.UserRepository;
+import com.dareen.spu.User.User;
+import com.dareen.spu.User.UserRepository;
 
 
 

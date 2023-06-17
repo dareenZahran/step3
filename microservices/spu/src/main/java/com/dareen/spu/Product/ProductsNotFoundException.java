@@ -1,4 +1,4 @@
-package com.project.demo.Product;
+package com.dareen.spu.Product;
 
 public class ProductsNotFoundException extends RuntimeException {
 	

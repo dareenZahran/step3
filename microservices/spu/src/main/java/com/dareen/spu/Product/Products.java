@@ -1,7 +1,5 @@
-
-
+package com.dareen.spu.Product;
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -16,10 +14,10 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 // import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.project.demo.Category.Category;
-import com.project.demo.Order.Order;
-import com.project.demo.Supplier.Supplier;
-@Entity
+// import com.project.demo.Category.Category;
+// import com.project.demo.Order.Order;
+// import com.project.demo.Supplier.Supplier;
+ @Entity
 // @Table(name = "products")
 public class Products {
     
@@ -44,14 +42,15 @@ public class Products {
     private String photo;
 	
     
-    @ManyToMany(mappedBy = "products")
-    private List<Order> orders;
+    // @ManyToMany(mappedBy = "products")
+    // private List<Order> orders;
     // @NotBlank(message = "Product  Code is required")
 	// private String productCode;
-    @JsonBackReference(value = "category")
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    // @JsonBackReference(value = "category")
+    // @ManyToOne
+    // @JoinColumn(name = "category_id")
+    // private Category category;
+    
     public String getPhoto() {
         return photo;
     }
@@ -61,29 +60,29 @@ public class Products {
     }
 
 
-    @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "supplier_id")
-    // @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Supplier supplier;
+    // @JsonBackReference
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name = "supplier_id")
+    // // @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    // private Supplier supplier;
 
-    // existing methods
+    // // existing methods
     
-    public Category getCategory() {
-        return category;
-    }
+    // public Category getCategory() {
+    //     return category;
+    // }
 
-    public void setCategory(Category category) {
-        this.category = category;
-    }
+    // public void setCategory(Category category) {
+    //     this.category = category;
+    // }
 
-    public Supplier getSupplier() {
-        return supplier;
-    }
+    // public Supplier getSupplier() {
+    //     return supplier;
+    // }
 
-    public void setSupplier(Supplier supplier) {
-        this.supplier = supplier;
-    }
+    // public void setSupplier(Supplier supplier) {
+    //     this.supplier = supplier;
+    // }
 
     
     // public String getProductCode() {

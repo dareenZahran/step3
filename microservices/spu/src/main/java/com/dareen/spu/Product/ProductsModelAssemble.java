@@ -1,4 +1,4 @@
-package com.project.demo.Product;
+package com.dareen.spu.Product;
 
 
 import org.springframework.hateoas.EntityModel;
