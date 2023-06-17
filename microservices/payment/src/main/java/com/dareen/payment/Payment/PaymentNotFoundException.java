@@ -1,4 +1,4 @@
-package com.project.demo.Payment;
+package com.dareen.payment.Payment;
 
 public class PaymentNotFoundException extends RuntimeException{
     public PaymentNotFoundException(Long paymentId) {
