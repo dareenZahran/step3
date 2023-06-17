@@ -29,9 +29,8 @@ public class Category {
      @Size(min = 2, max = 50, message = "Category name must be between 2 and 50 characters")
     private String categoryName;
 
-    @JsonManagedReference(value="category")
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Products> products;
+  
+    private Set<Long> products;
 
     public Category() {
         this.products = new HashSet<>();
@@ -58,13 +57,8 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public Set<Products> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Products> products) {
-        this.products = products;
-    }
+   
+    
 
     @Override
     public String toString() {

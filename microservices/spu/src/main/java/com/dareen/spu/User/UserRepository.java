@@ -2,8 +2,8 @@ package com.dareen.spu.User;
 
 import java.util.Optional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+// import javax.persistence.EntityManager;
+// import javax.persistence.PersistenceContext;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

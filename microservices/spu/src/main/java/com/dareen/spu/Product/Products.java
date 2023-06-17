@@ -46,10 +46,10 @@ public class Products {
     // private List<Order> orders;
     // @NotBlank(message = "Product  Code is required")
 	// private String productCode;
-    // @JsonBackReference(value = "category")
-    // @ManyToOne
-    // @JoinColumn(name = "category_id")
-    // private Category category;
+
+
+   @NotNull(message = "Category ID is required")
+    private Long categoryId;
     
     public String getPhoto() {
         return photo;
