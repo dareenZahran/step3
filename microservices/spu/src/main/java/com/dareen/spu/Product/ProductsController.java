@@ -41,11 +41,11 @@ public class ProductsController {
     private final JwtUtils jwtUtils;
     
 
-    public ProductsController(ProductsRepository repository, ProductsModelAssemble assembler, JwtUtils jwtUtils) {
+    public ProductsController(ProductsRepository repository, ProductsModelAssemble assembler, JwtUtils jwtUtils ,CategoryClient categoryClient) {
         this.repository = repository;
         this.assembler = assembler;
         this.jwtUtils=jwtUtils;
-     
+        this.categoryClient = categoryClient;
     }
 
     
