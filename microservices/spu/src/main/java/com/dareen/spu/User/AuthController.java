@@ -2,6 +2,7 @@ package com.dareen.spu.User;
 
 
 
+import org.bouncycastle.jcajce.util.JcaJceUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,11 +16,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dareen.spu.security.jwt.JwtResponse;
-import com.dareen.spu.security.jwt.JwtUtils;
-import com.dareen.spu.security.services.MessageResponse;
-import com.dareen.spu.response.MessageResponse;
-import com.dareen.spu.security.services.UserDetailsImpl;
+import com.dareen.spu.payload.request.LoginRequest;
+import com.dreen.spu.payload.request.SignupRequest;
+import com.dareen.spu.payload.response.JwtResponse;
+import com.dareen.spu.payload.response.MessageResponse;
+import com.project.demo.security.jwt.JwtUtils;
+import com.project.demo.security.services.UserDetailsImpl;
+
 
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -48,7 +51,7 @@ public class AuthController {
         new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
     SecurityContextHolder.getContext().setAuthentication(authentication);
-    String jwt = jwtUtils.generateJwtToken(authentication);
+    String jwt = JcaJceUtils.generateJwtToken(authentication);
    
   
     UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();    
