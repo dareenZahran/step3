@@ -1,4 +1,5 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
 
 public class SomeBean {
     private String name;

@@ -1,4 +1,5 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
 
 public @interface Size {
 

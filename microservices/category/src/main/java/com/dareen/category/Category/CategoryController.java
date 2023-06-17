@@ -1,4 +1,6 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
+
 import java.util.List;
 import java.util.stream.Collectors;
 

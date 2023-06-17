@@ -16,10 +16,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.project.demo.Product.Products;
 
 @Entity
 public class Category {
+    
 
    private @Id 
      @GeneratedValue(strategy = GenerationType.IDENTITY)

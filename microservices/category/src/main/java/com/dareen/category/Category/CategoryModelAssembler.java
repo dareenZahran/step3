@@ -1,4 +1,6 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import org.springframework.hateoas.EntityModel;

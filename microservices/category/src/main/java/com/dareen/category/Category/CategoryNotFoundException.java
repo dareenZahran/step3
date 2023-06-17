@@ -1,4 +1,6 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
+
 
 public class CategoryNotFoundException extends RuntimeException {
 

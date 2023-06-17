@@ -1,4 +1,6 @@
-package com.project.demo.Category;
+package com.dareen.category.Category;
+
+
 
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.CrossOrigin;
