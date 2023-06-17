@@ -21,32 +21,22 @@ public class ApiGatewayApplication {
 	}
 
 	@Bean
-	public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-		return builder.routes()
-				.route(p -> p.path("/get")
-						.filters(f -> f.addRequestHeader("Hello", "World")
-								.addRequestParameter("FirstName", "Rawan")
-								.addRequestParameter("LastName", "Gedeon"))
-						.uri("http://httpbin.org:80"))
-				.route(p -> p
-						.path("/currency-converter/**")
-			            .filters(f -> f.circuitBreaker(config -> config
-			                .setName("mycmd")
-			                .setFallbackUri("forward:/fallback")))
-			            .uri("lb://currency-conversion-service"))
-				
-				.route(p -> p
-						.path("/currency-exchange/**")
-						.uri("lb://currency-exchange-service"))
-				.route(p -> p
-						.path("/currency-converter/**")
-						.uri("lb://currency-conversion-service"))
-				.route(p -> p
-						.path("/currency-converter-feign/**")
-						.uri("lb://currency-conversion-service"))
+public RouteLocator myRoutes(RouteLocatorBuilder builder) {
+    return builder.routes()
+            .route(p -> p.path("/get")
+                    .filters(f -> f.addRequestHeader("Hello", "World")
+                            .addRequestParameter("FirstName", "Dareen")
+                            .addRequestParameter("LastName", "Zahran"))
+                    .uri("http://httpbin.org:80"))
+            .route(p -> p.path("/spu/**")
+                    .uri("lb://spu-service"))
+            .route(p -> p.path("/category/**")
+                    .uri("lb://category-service"))
+            .route(p -> p.path("/payment/**")
+                    .uri("lb://payment-service"))
+            .build();
+}
 
-				.build();
-	}
 	
 	@RequestMapping("/fallback")
 	public Mono<String> fallback() {
