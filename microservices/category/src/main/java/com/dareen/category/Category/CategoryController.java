@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 // import org.springframework.hateoas.IanaLinkRelations;
@@ -34,11 +35,28 @@ public class CategoryController {
 
     private final CategoryRepository repository;
     private final CategoryModelAssembler assembler;
+ @Autowired
+    private CategoryClientProxy  categoryService;
 
     CategoryController(CategoryRepository repository, CategoryModelAssembler assembler) {
         this.repository = repository;
         this.assembler = assembler;
     }
+    
+
+
+          @GetMapping("/category-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
+    public Category convertCategoryFeign(
+            @PathVariable String from,
+            @PathVariable String to,
+            @PathVariable double quantity
+    ) {
+        Category response = categoryService.retrieveCategoryValue(from, to);
+        double convertedValue = quantity * response.getConversionMultiple();
+        response.setQuantity(quantity);
+        response.setConvertedValue(convertedValue);
+        return response;
+    } 
     // @CrossOrigin
     @GetMapping("/Category")
     CollectionModel<EntityModel<Category>> all() {
