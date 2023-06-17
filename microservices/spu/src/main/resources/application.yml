@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spu
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spu
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
