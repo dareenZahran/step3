@@ -1,6 +1,7 @@
 package com.dareen.spu.Product;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale.Category;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
@@ -39,9 +40,10 @@ public class ProductsController {
     private final ProductsRepository repository;
     private final ProductsModelAssemble assembler;
     private final JwtUtils jwtUtils;
-    
+    @Autowired
+private Category categoryClient;
 
-    public ProductsController(ProductsRepository repository, ProductsModelAssemble assembler, JwtUtils jwtUtils ,CategoryClient categoryClient) {
+    public ProductsController(ProductsRepository repository, ProductsModelAssemble assembler, JwtUtils jwtUtils ,Category categoryClient) {
         this.repository = repository;
         this.assembler = assembler;
         this.jwtUtils=jwtUtils;

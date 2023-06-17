@@ -42,6 +42,7 @@ public class Products {
     private String photo;
 	
     
+    
     // @ManyToMany(mappedBy = "products")
     // private List<Order> orders;
     // @NotBlank(message = "Product  Code is required")
