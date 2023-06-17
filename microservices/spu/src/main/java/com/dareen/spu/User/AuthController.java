@@ -19,8 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dareen.spu.security.jwt.JwtUtils;
 import com.dareen.spu.security.services.UserDetailsImpl;
-import com.dareen.spu.payload.response.JwtResponse;
-import com.dareen.spu.payload.response.MessageResponse;
 
 
 @CrossOrigin(origins = "http://localhost:3000")

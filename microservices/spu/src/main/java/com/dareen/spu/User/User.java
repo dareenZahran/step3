@@ -2,21 +2,22 @@
 // import java.util.List;
 // import java.util.Objects;
 
-import java.util.List;
+// import java.util.List;
 
-import javax.persistence.CascadeType;
+// import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+// import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+// import com.fasterxml.jackson.annotation.JsonManagedReference;
 // import javax.persistence.OneToMany;
-import com.dareen.spu.Category.Size;
+// import com.dareen.spu.Category.Size;
 // @Entity
 // public class User {
 // import com.dareen.spu.Order.Order;
@@ -167,9 +168,9 @@ public class User {
   @Size(max = 120, message = "", min = 0)
   private String password;
 
-    @JsonManagedReference(value="Order")
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Order> orders;
+    // @JsonManagedReference(value="Order")
+    // @OneToMany(cascade = CascadeType.ALL)
+    // private List<Order> orders;
 
   public User() {
   }
