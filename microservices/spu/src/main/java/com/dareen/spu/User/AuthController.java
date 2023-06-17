@@ -17,12 +17,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dareen.spu.payload.request.LoginRequest;
-import com.dreen.spu.payload.request.SignupRequest;
+import com.dareen.spu.payload.request.SignupRequest;
 import com.dareen.spu.payload.response.JwtResponse;
 import com.dareen.spu.payload.response.MessageResponse;
-import com.project.demo.security.jwt.JwtUtils;
-import com.project.demo.security.services.UserDetailsImpl;
+import com.dareen.spu.security.jwt.JwtUtils;
+import com.dareen.spu.security.services.UserDetailsImpl;
 
+import io.jsonwebtoken.Jwts;
 
 
 @CrossOrigin(origins = "http://localhost:3000")
