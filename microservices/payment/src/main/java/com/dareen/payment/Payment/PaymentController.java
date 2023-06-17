@@ -34,12 +34,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentController {
 
+    private final SpuServiceClient spuServiceClient;
     private final PaymentRepository repository;
     private final PaymentModelAssembler assembler;
 
-    PaymentController(PaymentRepository repository, PaymentModelAssembler assembler) {
+    PaymentController(PaymentRepository repository, PaymentModelAssembler assembler ,spuServiceClient spuServiceClient) {
         this.repository = repository;
         this.assembler = assembler;
+         this.spuServiceClient = spuServiceClient;
     }
     // @CrossOrigin
     @GetMapping("/Payment")
